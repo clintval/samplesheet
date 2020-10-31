@@ -63,9 +63,9 @@ class TestCaselessDict(object):
     def test__contains__(self):
         assert "key" in CaselessDict({"key": "value"})
         assert "key" in CaselessDict(key="value")
-        assert "key" in CaselessDict(KEY="value") # Case invariant
-        assert "keY" in CaselessDict(KEY="value") # Case invariant
-        assert "KeY" in CaselessDict(KEY="value") # Case invariant
+        assert "key" in CaselessDict(KEY="value")  # Case invariant
+        assert "keY" in CaselessDict(KEY="value")  # Case invariant
+        assert "KeY" in CaselessDict(KEY="value")  # Case invariant
         assert "key" in CaselessDict({"KEY": "value"})
         assert "key" not in CaselessDict()
 
@@ -166,7 +166,9 @@ class TestCaselessDict(object):
         mapping = CaselessDict({2: 3, 4: 5, "lower": "UPPER"})
         assert mapping.updated(4, 10) == CaselessDict({2: 3, 4: 10, "lower": "UPPER"})
         assert mapping.updated(6, 7) == CaselessDict({2: 3, 4: 5, 6: 7, "lower": "UPPER"})
-        assert mapping.updated("LOWER", "UPDATED") == CaselessDict({2: 3, 4: 5, "lower": "UPDATED"})
+        assert mapping.updated("LOWER", "UPDATED") == CaselessDict(
+            {2: 3, 4: 5, "lower": "UPDATED"}
+        )
 
     def test_values(self):
         keyvalues = [(1, 2), (3, 4)]
