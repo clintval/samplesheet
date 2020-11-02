@@ -64,8 +64,7 @@ class CaselessDict(Generic[K, V]):
     def __getitem__(self, key: K) -> Any:
         """Return a value indexed with <key>."""
         if isinstance(key, (bytes, str)) and key.lower() in self._caseless:
-            caseless_key: K = cast(K, self._caseless[key.lower()])
-            return self._map[caseless_key]
+            return self._map[cast(K, self._caseless[key.lower()])]
         else:
             return self._map[key]
 
@@ -124,8 +123,9 @@ class CaselessDict(Generic[K, V]):
         if mapping is not None:
             for k, v in mapping.items():
                 if isinstance(k, (bytes, str)) and k.lower() in self._caseless:
-                    k = cast(K, self._caseless[k.lower()])
-                overrides[k] = v
+                    overrides[cast(K, self._caseless[k.lower()])] = v
+                else:
+                    overrides[k] = v
         return type(self)((list(self.items())) + list(overrides.items()))
 
     def get(self, key: K, default: Optional[Any] = None) -> Union[Any, V]:
