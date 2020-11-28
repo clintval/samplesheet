@@ -25,6 +25,8 @@ from sys import getsizeof, maxsize
 K = TypeVar("K", bound=Hashable)
 V = TypeVar("V")
 StringType = Union[bytes, str]
+NoneInt = Optional[int]
+NoneStr = Optional[str]
 
 
 class CaselessDict(Generic[K, V]):

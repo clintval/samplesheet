@@ -1,11 +1,9 @@
-from ._samplesheet import NoneInt
-from ._samplesheet import NoneStr
+from .util import NoneInt
+from .util import NoneStr
 from ._samplesheet import Section
 
-from ._samplesheet import ReadStructure
-from ._samplesheet import Sample
-
-# from ._samplesheet import SampleSheet
+from ._read_structure import ReadStructure
+from ._sample import Sample
 
 from .util import CaselessDict
 from .util import FrozenDict

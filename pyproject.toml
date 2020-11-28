@@ -10,6 +10,7 @@ authors     = ["Clint Valentine <valentine.clint@gmail.com>"]
 python                 = "^3.6"
 attrs                  = ">=20"
 attrs_strict           = ">=0.2.0"
+cattrs                 = ">=v1.0.0"
 sphinx                 = { version = "^3",      optional = true }
 black                  = { version = "19.10b0", optional = true }
 coverage               = { version = "^5",      optional = true }
