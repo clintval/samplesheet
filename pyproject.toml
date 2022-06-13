@@ -7,14 +7,10 @@ include     = ["LICENSE", "README.md"]
 authors     = ["Clint Valentine <valentine.clint@gmail.com>"]
 
 [tool.poetry.dependencies]
-python                 = "^3.6"
+python                 = ">=3.7,<4.0"
 attrs                  = ">=20"
 attrs_strict           = ">=0.2.0"
 cattrs                 = ">=v1.0.0"
-sphinx                 = { version = "^3",      optional = true }
-black                  = { version = "19.10b0", optional = true }
-coverage               = { version = "^5",      optional = true }
-flake8                 = { version = "^3.8",    optional = true }
 #flake8-eradicate      = { optional = true }
 #flake8-blind-except   = { optional = true }
 #flake8-builtins       = { optional = true }
@@ -22,13 +18,20 @@ flake8                 = { version = "^3.8",    optional = true }
 #flake8-import-order   = { optional = true }
 #flake8-logging-format = { optional = true }
 #flake8-rst-docstrings = { optional = true }
-hypothesis             = { version = "^5",      optional = true }
-mypy                   = { version = "0.780",   optional = true }
-pylint                 = { version = "^2",      optional = true }
-pytest                 = { version = "^6",      optional = true }
 #pytest-cov            = { optional = true }
 #pytest-doctestplus    = { optional = true }
 #pytest-parallel       = { optional = true }
+pytest = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+hypothesis             = { version = "^5",      optional = true }
+mypy                   = { version = "0.780",   optional = true }
+pylint                 = { version = "^2",      optional = true }
+pytest                 = { version = "^7",      optional = true }
+sphinx                 = { version = "^3",      optional = true }
+black                  = { version = "19.10b0", optional = true }
+coverage               = { version = "^5",      optional = true }
+flake8                 = { version = "^3.8",    optional = true }
 
 [tool.poetry.extras]
 docs = ["sphinx"]
