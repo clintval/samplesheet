@@ -1,0 +1,36 @@
+# samplesheet
+
+[![Testing Status](https://travis-ci.org/clintval/samplesheet.svg?branch=master)](https://travis-ci.org/clintval/samplesheet)
+[![Documentation Build Status](https://readthedocs.org/projects/samplesheet/badge/?version=latest)](https://samplesheet.readthedocs.io/en/latest/?badge=latest)
+[![Code Coverage](https://codecov.io/gh/clintval/samplesheet/branch/master/graph/badge.svg)](https://codecov.io/gh/clintval/samplesheet)
+[![PyPI Release](https://badge.fury.io/py/samplesheet.svg)](https://badge.fury.io/py/samplesheet)
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg)](http://bioconda.github.io/recipes/samplesheet/README.html)
+[![Python Versions](https://img.shields.io/pypi/pyversions/samplesheet.svg)](https://pypi.python.org/pypi/samplesheet/)
+[![MyPy Checked](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+A permissively licensed library designed to replace [Illumina's Experiment Manager](https://support.illumina.com/sequencing/sequencing_software/experiment_manager.html).
+
+```bash
+❯ pip install samplesheet
+```
+
+Or install with the Conda package manager after setting up your [Bioconda channels](https://bioconda.github.io/user/install.html#set-up-channels):
+
+```bash
+❯ conda install samplesheet
+```
+
+Which should be equivalent to:
+
+```bash
+❯ conda install -c bioconda -c conda-forge -c defaults samplesheet
+```
+
+Features:
+
+- Roundtrip reading, editing, and writing of Sample Sheets
+- _de novo_ creation creation of Sample Sheets
+- Exporting Sample Sheets to JSON
+
+Read the documentation at: [samplesheet.readthedocs.io](http://samplesheet.readthedocs.io/)
